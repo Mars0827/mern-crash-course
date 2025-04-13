@@ -1,4 +1,4 @@
-import { Box, Button } from "@chakra-ui/react"
+import { Box, Button, useColorModeValue } from "@chakra-ui/react"
 import CreatePage from './pages/CreatePage';
 import HomePage from './pages/HomePage';
 import Navbar from './components/Navbar';
@@ -6,7 +6,7 @@ import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <Box minH={"100vg"}>
+    <Box minH={"100vh"} bg={useColorModeValue("gray.100", "gray.900")}>
       <Navbar /> 
         <Routes>
           <Route path="/" element={<HomePage />} />
